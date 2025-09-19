@@ -6,8 +6,27 @@ public class Problem01 {
     public static void main(String[] args) {
         //System.out.println(delete("Pavan"));
         //System.out.println(recursive_delete("Paaaavaaanaaak",0,""));
-        skip("","PAaaavaAanaaa");
+        //skip("","PAaaavaAanaaa");
+
+        Problem01 ref = new Problem01();
+        System.out.println(ref.skip("PaAAvan"));
+
     }
+
+    String skip (String s) {
+        //base case : if string up is empty,it means you have reached the end of the string now you can print the processed p string
+        if (s.isEmpty()){
+            return "";
+        }
+        char ch = s.charAt(0);
+        if (ch == 'a' || ch == 'A') {
+            return skip(s.substring(1));
+        }
+        else {
+            return ch + skip(s.substring(1));
+        }
+    }
+
 
     //without using iterator
     // p - processed string
