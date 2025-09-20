@@ -1,5 +1,8 @@
 package Recursion.Strings_Subsets_Subsequences;
 
+//Q1. skip apple
+//Q2. skip app not apple
+
 public class Problem02 {
     public static void main(String[] args) {
         Problem02 p2 = new Problem02();
