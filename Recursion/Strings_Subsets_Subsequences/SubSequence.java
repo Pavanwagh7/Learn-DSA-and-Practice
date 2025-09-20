@@ -1,6 +1,6 @@
 package Recursion.Strings_Subsets_Subsequences;
 
-//find the subsequences of the string "abc"
+//Q.find the subsequences of the string "abc"
 
 public class SubSequence {
     public static void main(String[] args) {
