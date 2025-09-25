@@ -3,24 +3,24 @@ package Recursion.Strings_Subsets_Subsequences;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//Q.fins all the subsets of the array[1,2,3]
 public class SubSet {
     public static void main(String[] args) {
-//        int[] arr1 = {1,2,3};
-//
-//        List<List<Integer>> ans = subset(arr1);
-//
-//        for (List<Integer> list : ans)
-//            System.out.println(list);
+        int[] arr1 = {1,2,3};
 
-
-        //for array containing duplicate elements
-        int[] arr2 = {1,2,2};
-
-        List<List<Integer>> ans = subsetRemoveDuplicate(arr2);
+        List<List<Integer>> ans = subset(arr1);
 
         for (List<Integer> list : ans)
             System.out.println(list);
+
+
+        //for array containing duplicate elements
+//        int[] arr2 = {1,2,2};
+//
+//        List<List<Integer>> ans = subsetRemoveDuplicate(arr2);
+//
+//        for (List<Integer> list : ans)
+//            System.out.println(list);
 
     }
 
@@ -38,7 +38,8 @@ public class SubSet {
         }
         return outer;
     }
-
+    //if array is [1,2,2]
+    //there will be duplicate subsets ,remove duplicate subsets
     static List<List<Integer>> subsetRemoveDuplicate(int[] arr) {
         List<List<Integer>> outer = new ArrayList<>();
         outer.add(new ArrayList<>());// start with empty subset
