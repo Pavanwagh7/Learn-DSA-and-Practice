@@ -16,7 +16,7 @@ abc
 public class Permutations {
     public static void main(String[] args) {
 //        permutations("","abc");
-        System.out.println(permutations("","abc",new ArrayList<>()));
+        System.out.println(store_permutations("","abc",new ArrayList<>()));
     }
     static void permutations (String p,String up) {
         //base case
@@ -35,7 +35,7 @@ public class Permutations {
         }
     }
 
-    static List<String> permutations (String p, String up, List<String> list) {
+    static List<String> store_permutations(String p, String up, List<String> list) {
         //base case
         if (up.isEmpty()) {
             list.add(p);
@@ -48,7 +48,7 @@ public class Permutations {
         for (int i = 0; i <= p.length() ; i++) {
             String f = p.substring(0, i);
             String s = p.substring(i, p.length());
-            List<String> l1 = permutations(f + ch + s, up.substring(1),list);
+            List<String> l1 = store_permutations(f + ch + s, up.substring(1),list);
         }
         return list;
     }
