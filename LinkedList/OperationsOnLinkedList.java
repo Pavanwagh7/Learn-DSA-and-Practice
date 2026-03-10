@@ -13,7 +13,7 @@ public class OperationsOnLinkedList {
         return false;
     }
     public int valueAtKthNode (Node head,int k) {
-        /** It can be done using as a well */
+        /** It can be done using Recursion as a well */
         /**
 
         // base case
