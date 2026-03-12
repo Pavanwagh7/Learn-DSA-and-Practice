@@ -10,7 +10,7 @@ public class QuestionsRelatedToDelete_a_Node {
             ptr = ptr.next;
         }
     }
-    /** Que. 1.5  if target is present and assume target can exist in any Node of LL(LinkedList)
+    /** Que. 1.1  if target is present and assume target can exist in any Node of LL(LinkedList)
      ,even at the last Node of LL */
     public void deleteNextNodeIftargetPresent_Safe (Node head,int target) {
         Node ptr = head;
@@ -31,7 +31,7 @@ public class QuestionsRelatedToDelete_a_Node {
         }
         return -1;//Target not found
     }
-/** Que. 2.5 */
+    /** Que. 2.1 - Delete a Node if target is exist in a Linked List,target never found at 1st node */
     public void deleteNodeIfTargetExistsInNode (Node head, int target) {
         Node ptr = head.next;
         Node previous = head;
@@ -43,5 +43,9 @@ public class QuestionsRelatedToDelete_a_Node {
             previous = ptr;
             ptr = ptr.next;
         }
+    }
+    /** Que. 2.1 Delete a head node*/
+    public Node deleteHeadNode(Node head) {
+        return head.next;
     }
 }
