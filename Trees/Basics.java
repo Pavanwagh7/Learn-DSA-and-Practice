@@ -55,17 +55,30 @@ class BinaryTree {
         if (node == null){
             return;
         }
+
+        System.out.println(node.value);//print node value
+
         // Visit left Node 
-        System.out.println(node.value);
         print(node.left);
             
         // Visit right Node
-        if (node == null){
-            return;
-        }
-        System.out.println(node.value);
         print(node.right);
+    }
 
+    void prettyPrinting (Node node,int level) {
+        // Base case
+        if (node == null) return;
+
+        // Call rigth subtree
+        prettyPrinting(node.right, level + 1);
+        for (int spaces = 1;spaces <= level;spaces++) System.out.print(" ");
+        System.out.print(node.value);
+        System.out.println();// nextLine
+
+        // Call left subtree
+        prettyPrinting(node.left,level + 1);
+        
+        
     }
 }
 
